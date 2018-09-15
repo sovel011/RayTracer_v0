@@ -1,0 +1,10 @@
+#This is a sphere lit by an ambient light on a white background.
+#camera -1 0 0 1 0 1 0 1 0 45
+material 0 1 1 0 1 1 .5 .5 .5 32 0 0 0 1
+sphere 0 0 2 1
+material 1 1 1 1 .43 0 1 1 1 0 0 0 0 1
+sphere 0 -76 2 75
+#point_light 5 5 5 0 2 1 
+directional_light 1 1 1 1 -1 1
+ambient_light .1 .1 .1
+background .2 .2 .2

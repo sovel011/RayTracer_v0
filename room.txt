@@ -1,0 +1,62 @@
+background .69 .77 .87
+output_image room.bmp
+film_resolution 1280 800
+
+material 0 0 0 0 0 0  1 1 1 25 0 0 0 1
+sphere 3 -2.5 7 1.5
+
+material 0 0 0 0 0 0 .9 .9 .9 25 0 0 0 1
+sphere -3.5 3.5 11 2
+
+max_vertices 25
+
+vertex -200 -5 -200
+vertex 200 -5 -200
+vertex 200 -5 200
+vertex -200 -5 200
+
+#left wall
+vertex -7 -5 -2000
+vertex -7 -5 2000
+vertex -7 2000 2000
+
+#right wall
+vertex 7 -5 -2000
+vertex 7 2000 2000
+vertex 7 -5 2000
+
+
+#back wall
+vertex -200 -5 15
+vertex 200 -5 15
+vertex 200 200 15
+
+#ceiling
+vertex -20 8 20
+vertex 20 8 20
+vertex 20 8 -20
+vertex -20 8 -20
+
+
+material 1 1 1 .29 0 .5 0 0 0 5 0 0 0 1
+triangle 0 1 2
+triangle 0 2 3
+
+material 1 1 1 .6 0 0 0 0 0 5 0 0 0 1
+triangle 4 5 6
+
+material 1 1 1 0 1 0 0 0 0 5 0 0 0 1
+triangle 7 8 9
+
+material .1 1 1 0 1 1 0 0 0 5 0 0 0 1
+triangle 10 11 12
+
+material 1 1 1 1 1 1 0 0 0 5 0 0 0 1
+triangle 13 14 15
+triangle 13 15 16
+
+#directional_light 1 1 1 0 0 1
+point_light 50 50 50 0 7 5
+ambient_light .1 .1 .1
+max_depth 1
+
